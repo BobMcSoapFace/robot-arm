@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "robotarm") (type "KiCad") (uri "C:/Users/riley/Projects/robotarm/kicad/robotarm.pretty") (options "") (descr ""))
+)
