@@ -13,7 +13,7 @@ TwoWire mainI2C = TwoWire(0);
 double Q_angle = 0.001;  // Process noise variance for the accelerometer
 double Q_bias = 0.003;   // Process noise variance for the gyroscope bias
 double R_measure = 0.03; // Measurement noise variance
-unsigned long time = 0;
+unsigned long progTime = 0;
 
 const int8_t X_IMU = 1;
 const int8_t Y_IMU = 2;
@@ -85,6 +85,7 @@ Motor motorList[numLimbs] = { // in order of connection from base to hand
 //------
 
 //all angles are radians from the horizontal up; 0 or pi radians means arm is flat 
+double Kalman_filter(Motor *limb, double angle, double gyroRate, double accelAngle, double dt);
 
 void sendCommand(
     double baseAngle,
@@ -145,9 +146,9 @@ void fetchAngles(){
                 motor.angleCarrierOrientation
             );
         }
-        double dt = (millis() - time)/1000.0;
+        double dt = (millis() - progTime)/1000.0;
         dt = dt <= 0 ? 0.001 : dt;
-        time = millis();
+        progTime = millis();
 
         // original function:
         // pitch = Kalman_filter(pitch, gx, atan2(-ax, sqrt(ay * ay + az * az)) * 180.0 / PI);
@@ -161,7 +162,7 @@ void fetchAngles(){
 
 void setup() {
     mainI2C.begin(I2C_SDA_MAIN, I2C_SCL_MAIN, 100000);
-    time = millis();
+    progTime = millis();
 }
 
 bool hasRunTest = false;
