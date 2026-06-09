@@ -182,6 +182,7 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 1. Using the screw terminals on each board, connect wires from the main controller to the limb controller in the base on one side. On the other side of the limb controller's screw terminals, connect more wires to the next gearbox's limb controllers, repeating the process for each controller until the hand's controller is connected.
    * You may have to unscrew some parts connecting to the gearbox to be able to reach the screw terminals.
    * Low capacitance wires are preferred, ex. solid core
+   * Each terminal in the screw terminals on the limb controller are connected directly to the parallel terminal on the other screw terminal; simply connect the same terminals with each other
 2. Lower the side of the first limb's initial gearbox with the output side facing the base's part 4 side with two holes for screws.
 3. Deattach the limb's part 11 from the gearbox and part 12, then secure the gearbox in the base's part 4 by screwing in the two holes. Reattach part 11 afterwards.
 4. On the other side of the gearbox, secure the gearbox with the three screw holes on base 4.
