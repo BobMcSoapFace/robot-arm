@@ -7,12 +7,10 @@ I built this project mostly to challenge myself to tackle more complicated elect
 All materials can be found within BOM.csv.
 # Electronics
 ## Limb Controller PCB
-[limb controller description]
 ![limb controller pcb 3d model](/images/limbcontroller_model.png)
 ![limb controller pcb footprint](/images/limbcontroller_pcb.png)
 ![limb controller schematic](/images/limbcontroller_schematic.png)
 ## Main Controller PCB
-[main controller description]
 ![main controller pcb 3d model](/images/maincontroller_model.png)
 ![main controller pcb footprint](/images/maincontroller_pcb.png)
 ![main controller schematic](/images/maincontroller_schematic.png)
