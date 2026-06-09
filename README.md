@@ -1,9 +1,10 @@
 # robot-arm
-A project ...
-[desc]
+![zine picture](/images/zine.png)
+robot-arm is a 4-axis robot arm designed with modularity in mind. Depending on the maximum torque output of the motors and maximum range of the I2C wires, this project can support numerous limbs with only minor changes in code. Currently, the code is fixed to allowing two limbs and a hand on the robot.
 
-# Materials
+I built this project mostly to challenge myself to tackle more complicated electronic and mechanical designs, but also because most hobbyist robot arms focus on using claws or grippers to pick up objects. For this project, the minor change of a claw to a hand that can sense its own orientation as well as high gear ratios allows for supporting heavier objects such as displays and light fixtures. 
 
+All materials can be found within BOM.csv.
 # Electronics
 ## Limb Controller PCB
 [limb controller description]
@@ -26,7 +27,7 @@ On the limb controller boards, use PlatformIO to flash via USB-C. While USB-C is
 ## Assembly
 Unless specified otherwise, all screws mentioned in the steps below refer to M4 1.6cm long screws meant for M4x6x6 inserts.
 ### Step 1 - baseSunGear
-![](/images/baseSunGear_diagram.png)
+![baseSunGear diagram](/images/baseSunGear_diagram.png)
 | Object | Print Quantity |
 | --- | --- |
 | 1 | 1x1 |
@@ -37,7 +38,7 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 2. Screw part 1 to part 2.
 3. Repeat this process 3 more times, for a total baseSunGear quantity of 4.
 ### Step 2 - gearReducer
-![](/images/gearReducer_diagram.png)
+![gearReducer diagram](/images/gearReducer_diagram.png)
 <ins>**Note: There is a baseSunGear supposed to be between parts 1 and 2 and the three gears, but is hidden for better clarity.**</ins>
 | Object | Print Quantity |
 | --- | --- |
@@ -60,7 +61,7 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 9. Screw part 4 to part 3.
 10. Repeat this process 3 more times, for a total gearReducer quantity of 4.
 ### Step 3 - gearReducerOutput
-![](/images/gearReducerOutput_diagram.png)
+![gearReducerOutput digram](/images/gearReducerOutput_diagram.png)
 | Object | Print Quantity |
 | --- | --- |
 | 1 | 1x4 |
@@ -77,8 +78,8 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 7. Screw part 3 to part 2.
 9. Repeat this process 3 more times, for a total gearReducerOutput quantity of 4.
 ### Step 4 - gearBox
-![](/images/gearBox_diagram1.png)
-![](/images/gearBox_diagram2.png)
+![gearBox diagram 1](/images/gearBox_diagram1.png)
+![gearBox diagram 2](/images/gearBox_diagram2.png)
 <ins>**Note: There is a 6020 bearing supposed to be between parts 1 and 2, but is hidden for better clarity.**</ins>
 | Object | Print Quantity |
 | --- | --- |
@@ -108,8 +109,8 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 13. Press fit a 6020 bearing onto the gearbox's part 1, then press fit the bearing onto the gearReducerOutput's output cylinder (marked part 2)
 14. Repeat 3 more times, for a total of 4 gearboxes.
 ### Step 5 - limb
-![](/images/limb_diagram1.png)
-![](/images/limb_diagram2.png)
+![limb diagram 1](/images/limb_diagram1.png)
+![limb diagram 2](/images/limb_diagram2.png)
 | Object | Print Quantity |
 | --- | --- |
 | 1 | 1x2 |
@@ -139,9 +140,9 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 12. Screw parts 14 and 4 to a second gearbox.
 13. Repeat the steps above for a second limb, using the newly attached gearbox as the base (used in steps 2 and 5).
 ### Step 6 - base
-![](/images/base_diagram1.png)
-![](/images/base_diagram2.png)
-![](/images/base_diagram3.png)
+![base diagram 1](/images/base_diagram1.png)
+![base diagram 2](/images/base_diagram2.png)
+![base diagram 3](/images/base_diagram3.png)
 | Object | Print Quantity |
 | --- | --- |
 | 1 | 1x1 |
@@ -163,9 +164,9 @@ Unless specified otherwise, all screws mentioned in the steps below refer to M4 
 7. Screw 8 part 6's to connect each of the part 7's together. 
 7. With a gearbox in the middle and output side facing upwards, screw part 4 to the gearbox using the three holes.
 ### Step 7 - hand
-![](/images/hand_diagram1.png)
-![](/images/hand_diagram2.png)
-![](/images/hand_diagram3.png)
+![hand diagram 1](/images/hand_diagram1.png)
+![hand diagram 2](/images/hand_diagram2.png)
+![hand diagram 3](/images/hand_diagram3.png)
 
 | Object | Print Quantity |
 | --- | --- |
